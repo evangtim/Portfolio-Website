@@ -338,17 +338,17 @@ img{
 }
 
 .work__item{
-    cursor: pointer;
-    font-feature-settings: bold;
-    text-align: center;
-    font-weight: bold;
-    color: var(--first-color);
-    margin-bottom: auto;    
-  }
-  .work__time:hover{
-    transform: 1s;
-  }
+  cursor: pointer;
+  font-feature-settings: bold;
+  text-align: center;
+  font-weight: bold;
+  color: var(--first-color);
+  margin-bottom: auto;    
 }
+.work__time:hover{
+  transform: 1s;
+}
+
 
 /* ===== CONTACT =====*/
 .contact__input{
