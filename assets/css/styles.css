@@ -195,6 +195,7 @@ img{
 .home__title{
   font-size: var(--big-font-size);
   margin-bottom: var(--mb-5);
+  margin-top: var(--mb-3);
 }
 .home__title-color{
   color: var(--first-color);
@@ -246,6 +247,9 @@ img{
 .about__img img{
   width: 200px;
   border-radius: .5rem;
+}
+.about__text{
+  text-align: justify;
 }
 
 /* ===== SKILLS =====*/
@@ -303,6 +307,18 @@ img{
 .skills__img{
   border-radius: .5rem;
 }
+.skills__sc{
+  width: 95%
+}
+.skills__fad{
+  width: 85%
+}
+.skills__ve{
+  width: 70%
+}
+.skills__fd{
+  width: 80%
+}
 
 /* ===== WORK =====*/
 .work__container{
@@ -315,10 +331,23 @@ img{
 }
 .work__img img{
   transition: 1s;
-  cursor: pointer;
+  cursor: pointer;  
 }
 .work__img img:hover{
   transform: scale(1.1);
+}
+
+.work__item{
+    cursor: pointer;
+    font-feature-settings: bold;
+    text-align: center;
+    font-weight: bold;
+    color: var(--first-color);
+    margin-bottom: auto;    
+  }
+  .work__time:hover{
+    transform: 1s;
+  }
 }
 
 /* ===== CONTACT =====*/
