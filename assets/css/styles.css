@@ -218,6 +218,7 @@ img{
   right: 0;
   bottom: 0;
   width: 295px;
+  height: 350px;
 }
 
 /*BUTTONS*/
@@ -330,19 +331,31 @@ img{
   width: 85%;
 }
 .skills__img{
-  border-radius: .5rem;
+  border-radius: .7rem; 
 }
 .skills__sc{
-  width: 95%
+  width: 95%;
 }
 .skills__fad{
-  width: 85%
+  width: 85%;
 }
 .skills__ve{
-  width: 70%
+  width: 70%;
 }
 .skills__fd{
-  width: 80%
+  width: 80%;
+}
+.skills__pi{
+  width: 70%;
+}
+.skills__db{
+  width: 90%;
+}
+.skills__java{
+  width: 75%;
+}
+.skills__ph{
+  width: 90%;
 }
 
 /* ===== WORK =====*/
