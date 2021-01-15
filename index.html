@@ -294,11 +294,11 @@
                 <h2 class="section-title">Contact</h2>
 
                 <div class="contact__container bd-grid">
-                    <form action="https://formspree.io/f/xvovvzok" method="POST" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="text" placeholder="Tel" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="message" id="" cols="0" rows="10" class="contact__input"></textarea>
+                    <form action="https://formspree.io/f/xvovvzok" name="myForm" method="POST" onsubmit="return validateForm()" class="contact__form">
+                        <input type="text" placeholder="Name" class="contact__input" name="fName" required>
+                        <input type="text" placeholder="Tel" class="contact__input" name="fTel" required>
+                        <input type="mail" placeholder="Email" class="contact__input" name="fEmail" required>
+                        <textarea name="message" id="" cols="0" rows="10" class="contact__input" required></textarea>
                         <a href="thanks.html"><input type="button" value="Submit" class="contact__button button"></a>                        
                     </form>
                 </div>

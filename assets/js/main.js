@@ -56,6 +56,33 @@ sr.reveal('.work__img',{interval: 200});
 /*SCROLL CONTACT*/
 sr.reveal('.contact__input',{interval: 200}); 
 
+/*FORM VALIDATION*/
+function validateForm() {
+    if (document.myForm.fName.value == "") {
+      alert("Name must be filled out");
+      document.myForm.fName.focus ();
+      return false;
+    }
+    if (document.myForm.fTel.value == "") {
+      alert("Tel must be filled out");
+      document.myForm.fTel.focus ();
+      return false;
+    }
+    if (document.myForm.fEmail.value == "") {
+      alert("Email must be filled out");
+      document.myForm.fEmail.focus ();
+      return false;
+    }
+    if (document.myForm.message.value == "") {
+      alert("Message must be filled out");
+      document.myForm.message.focus ();
+      return false;
+    }
+    return (true)
+}
+
+
+
 
 
 
