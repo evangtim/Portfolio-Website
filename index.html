@@ -292,14 +292,26 @@
             <!--using FORMSPREE.COM as the intermediary for email and message delivery-->
             <section class="contact section" id="contact">
                 <h2 class="section-title">Contact</h2>
+                <script type = "text/javascript">
+                    
+                       function Redirect() {
+                          window.location = "thanks.html";
+                       }
+                    
+                 </script>
 
                 <div class="contact__container bd-grid">
-                    <form action="https://formspree.io/f/xvovvzok" name="myForm" method="POST" onsubmit="return validateForm()" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input" name="fName" required>
-                        <input type="text" placeholder="Tel" class="contact__input" name="fTel" required>
-                        <input type="mail" placeholder="Email" class="contact__input" name="fEmail" required>
-                        <textarea name="message" id="" cols="0" rows="10" class="contact__input" required></textarea>
-                        <a href="thanks.html"><input type="button" value="Submit" class="contact__button button"></a>                        
+                    <form action="https://formspree.io/f/xvovvzok" id="contactForm" name="myForm" method="post" onsubmit="return validateForm()" class="contact__form">
+                        <input type="text" placeholder="Name" id="fname" class="contact__input" name="fName" required>
+                        <div class="error" id="fname_error"></div>
+                        <input type="text" placeholder="Tel" id="tel" class="contact__input" name="fTel" required>
+                        <div class="error" id="tel_error"></div>
+                        <input type="mail" placeholder="Email" id="email" class="contact__input" name="fEmail" required>
+                        <div class="error" id="email_error"></div>
+                        <textarea name="message" id="message" cols="0" rows="10" class="contact__input" required></textarea>
+                        <div class="error" id="message_error"></div>                        
+                        <input type="button" value="Submit" onclick="Redirect();" class="contact__button button"/>                       
+                        
                     </form>
                 </div>
             </section>
