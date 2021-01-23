@@ -221,6 +221,19 @@ img{
   height: 350px;
 }
 
+/*THANK*/
+.thanks{
+  height: calc(100vh - 3rem);
+  row-gap: 1rem;
+  align-self: center;
+}
+.lead{
+  align-self: center;
+}
+.display-3{
+  align-self: center;
+}
+
 /*BUTTONS*/
 .button{
   display: inline-block;
