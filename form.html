@@ -1,0 +1,104 @@
+<form id="my-form"
+  action="https://formspree.io/f/xvovvzok"
+  method="POST"
+>
+  <label>Email:</label>
+  <input type="email" name="email" />
+  <label>Message:</label>
+  <input type="text" name="message" />
+  <button id="my-form-button">Submit</button>
+  <p id="my-form-status"></p>
+</form>
+
+<!--MY FORM-->
+
+<form action="https://formspree.io/f/xvovvzok" id="contactForm" name="myForm" method="POST" onsubmit="return validateForm()" class="contact__form">
+    <input type="text" placeholder="Name" id="fname" class="contact__input" name="fName" required>
+    <div class="error" id="fname_error"></div>
+    <input type="text" placeholder="Tel" id="tel" class="contact__input" name="fTel" required>
+    <div class="error" id="tel_error"></div>
+    <input type="mail" placeholder="Email" id="email" class="contact__input" name="fEmail" required>
+    <div class="error" id="email_error"></div>
+    <textarea name="message" id="message" cols="0" rows="10" class="contact__input" required></textarea>
+    <div class="error" id="message_error"></div>                        
+    <input type="button" id="submit" value="Submit" onclick="Redirect();" class="contact__button button"/>                       
+    
+</form>
+
+<!-- Place this script at the end of the body tag -->
+
+<script>
+  window.addEventListener("DOMContentLoaded", function() {
+
+    // get the form elements defined in your form HTML above
+    
+    var form = document.getElementById("contactForm");
+    var button = document.getElementById("submit");
+    var status = document.getElementById("contact");
+
+    // Success and Error functions for after the form is submitted
+    
+    function success() {
+      form.reset();
+      button.style = "display: none ";
+      status.innerHTML = "Thanks!";
+    }
+
+    function error() {
+      status.innerHTML = "Oops! There was a problem.";
+    }
+
+    // handle the form submission event
+
+    form.addEventListener("submit", function(ev) {
+      ev.preventDefault();
+      var data = new FormData(form);
+      ajax(form.method, form.action, data, success, error);
+    });
+  });
+  
+  // helper function for sending an AJAX request
+
+  function ajax(method, url, data, success, error) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        success(xhr.response, xhr.responseType);
+      } else {
+        error(xhr.status, xhr.response, xhr.responseType);
+      }
+    };
+    xhr.send(data);
+  }
+
+  // Find out if a gender has been selected
+	var isChecked = false;
+	for(var i=0; i < regForm['gender'].length; i++) {
+		if(regForm['gender'][i].checked) {
+			isChecked = true; // Found a checked radio button!
+			break; // No need to continue the search
+		}
+	}
+
+	// If a gender selection was not found
+	if(!isChecked) {
+		errorMessages.push('* Please choose your gender');
+	}
+  
+  // If selection has no value
+  if(!regForm['continent'].value) {
+      errorMessages.push('* Please select your location');
+  }
+</script>
+
+
+// If both passwords have values
+	if(regForm['password1'].value && regForm['password2'].value) {
+		// If passwords don't match
+		if(regForm['password1'].value != regForm['password2'].value) {
+			errorMessages.push('* Passwords do not match');
+		}
+	}
