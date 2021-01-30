@@ -77,7 +77,7 @@ function validateForm(event) {
 	var errorMessages = Array();
 
 	// If Name is empty
-	if(!contactForm['fName'].value) {
+	if(!contactForm['name'].value) {
 		errorMessages.push('* Please enter Full Name');
 	}
 
